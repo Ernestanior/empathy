@@ -1,21 +1,34 @@
 import { FC } from "react";
-import { UserOutlined } from "@ant-design/icons";
-import { Space, Row, Col, Button } from "antd";
+import { Row, Col, Button } from "antd";
 import "./index.less";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import { getLanguage, setLanguage } from "@/locale";
 
 const HeaderPlx: FC = () => {
+  const lang = getLanguage();
   return (
     <nav className="comp-header">
       <Row align="middle">
         <Col flex={1}>
-          <Link to="/home"><span className="logo">EMPATHY</span></Link>
+          <Link to="/home">
+            <span className="logo">GREYPANEL</span>
+          </Link>
         </Col>
-        <Col span={3}>
-          <div className="btns" >
-            <Button style={{ borderRadius: 30, color: "#2465e9" }}><FormattedMessage id="LOGIN"></FormattedMessage>Login</Button>
-            <Button style={{ borderRadius: 30, color: "#2465e9" }}>Sign up</Button>
+        <Col span={5}>
+          <div className="btns">
+            <Button
+              style={{ borderRadius: 30, color: "#2465e9" }}
+              onClick={() => setLanguage(lang === "zh_CN" ? "en_US" : "zh_CN")}
+            >
+              {lang === "zh_CN" ? "English" : "中文"}
+            </Button>
+            <Button style={{ borderRadius: 30, color: "#2465e9" }}>
+              <FormattedMessage id="LOGIN" />
+            </Button>
+            <Button style={{ borderRadius: 30, color: "#2465e9" }}>
+              <FormattedMessage id="SIGN_UP" />
+            </Button>
           </div>
         </Col>
       </Row>

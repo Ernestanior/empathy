@@ -2,7 +2,6 @@ import { FC } from "react";
 import { Layout } from "antd";
 import ContentP from "./content";
 import HeaderPlx from "./header";
-import useAccountInfo from "@/store/account";
 
 interface IProps {
   children: any;
