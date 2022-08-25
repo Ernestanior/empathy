@@ -4,15 +4,15 @@ import "./index.less";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { getLanguage, setLanguage } from "@/locale";
-
+import logo from "@/assets/home/logo.png";
 const HeaderPlx: FC = () => {
   const lang = getLanguage();
   return (
     <nav className="comp-header">
-      <Row align="middle">
+      <Row>
         <Col flex={1}>
-          <Link to="/home">
-            <span className="logo">GREYPANEL</span>
+          <Link to="/">
+            <img alt="" src={logo} style={{ width: 200 }}></img>
           </Link>
         </Col>
         <Col span={5}>

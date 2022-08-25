@@ -19,7 +19,8 @@ function App() {
           width: "100%",
           minHeight: "100vh",
           overflow: "hidden",
-          padding: "83px 121px",
+          padding: "83px 110px",
+          backgroundColor: "#2465e9",
         }}
       >
         <Routers />
