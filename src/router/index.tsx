@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Login from "@/pages/login";
+import Register from "@/pages/register";
 import Home from "@/pages/home";
 import Customer from "@/pages/customer";
 import Profile from "@/pages/profile";
@@ -23,6 +24,7 @@ const ProjectRouter: FC = () => {
       <LayoutPlx>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/customer" element={<Customer />} />
           <Route path="/profile" element={<Profile />} />
           <Route index element={<Home />} />

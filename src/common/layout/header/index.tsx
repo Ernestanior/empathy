@@ -1,12 +1,13 @@
 import { FC } from "react";
 import { Row, Col, Button } from "antd";
 import "./index.less";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { getLanguage, setLanguage } from "@/locale";
 import logo from "@/assets/home/logo.png";
 const HeaderPlx: FC = () => {
   const lang = getLanguage();
+  const navigate = useNavigate();
   return (
     <nav className="comp-header">
       <Row>
@@ -23,10 +24,16 @@ const HeaderPlx: FC = () => {
             >
               {lang === "zh_CN" ? "English" : "中文"}
             </Button>
-            <Button style={{ borderRadius: 30, color: "#2465e9" }}>
+            <Button
+              style={{ borderRadius: 30, color: "#2465e9" }}
+              onClick={() => navigate("/login")}
+            >
               <FormattedMessage id="LOGIN" />
             </Button>
-            <Button style={{ borderRadius: 30, color: "#2465e9" }}>
+            <Button
+              style={{ borderRadius: 30, color: "#2465e9" }}
+              onClick={() => navigate("/register")}
+            >
               <FormattedMessage id="SIGN_UP" />
             </Button>
           </div>

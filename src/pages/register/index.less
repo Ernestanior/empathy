@@ -1,0 +1,69 @@
+.campus-register {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .ticket {
+    margin-top: 3rem;
+    width: 40rem;
+    z-index: 2;
+  }
+  .cloud {
+    position: absolute;
+    width: 12rem;
+    top: -4rem;
+    right: 11rem;
+    transform: rotate(180deg);
+  }
+  .sparkle {
+    position: absolute;
+    width: 15rem;
+    bottom: -9rem;
+    right: 8rem;
+    transform: rotate(70deg);
+  }
+  .frame {
+    position: absolute;
+    width: 70rem;
+    transform: translate(-15rem, -5rem) rotate(-10deg);
+  }
+  .newlogo {
+    position: absolute;
+    width: 10rem;
+    top: -4rem;
+    left: 10rem;
+  }
+  .form {
+    z-index: 3;
+    width: 33rem;
+    height: 15rem;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10rem;
+    .form-item {
+      margin-bottom: 1rem;
+      label {
+        color: #777;
+        font-weight: bold;
+        font-family: poppin;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+      input {
+        padding: 8px 20px;
+        background-color: #e2e6ed;
+        border: 0;
+        border-radius: 6px;
+        width: 100%;
+      }
+    }
+    .log-in-btn {
+      margin-top: 6rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
