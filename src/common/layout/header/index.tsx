@@ -4,7 +4,7 @@ import "./index.less";
 import { Link, useNavigate } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { getLanguage, setLanguage } from "@/locale";
-import logo from "@/assets/home/logo.png";
+// import logo from "@/assets/home/logo.png";
 const HeaderPlx: FC = () => {
   const lang = getLanguage();
   const navigate = useNavigate();
@@ -12,9 +12,9 @@ const HeaderPlx: FC = () => {
     <nav className="comp-header">
       <Row>
         <Col flex={1}>
-          <Link to="/">
+          {/* <Link to="/">
             <img alt="" src={logo} style={{ width: 200 }}></img>
-          </Link>
+          </Link> */}
         </Col>
         <Col span={5}>
           <div className="btns">
